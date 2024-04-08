@@ -1,3 +1,4 @@
+import 'package:auto_sms_sender_for_ideal/screens/debt_month_screen.dart';
 import 'package:auto_sms_sender_for_ideal/screens/sms_to_all_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -50,7 +51,10 @@ class HomeScreen extends StatelessWidget {
                     minimumSize: const Size.fromHeight(60),
                   ),
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const DebtMonthScreen()),
+                    );
                   },
                   child: Text(
                     "QARZDORLARGA SMS YUBORISH",
