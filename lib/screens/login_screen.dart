@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_screen.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -53,7 +55,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 onPressed: () {
                   if(loginController.text == "nargiza" && passwordController.text == "4086"){
-                    print("gee");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const HomeScreen()),
+                    );
                   }
                 },
                 child: Text(
